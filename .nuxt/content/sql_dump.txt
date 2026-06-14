@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS _content_info (id TEXT PRIMARY KEY, "ready" BOOLEAN, "structureVersion" VARCHAR, "version" VARCHAR, "__hash__" TEXT UNIQUE); -- structure
+INSERT INTO _content_info VALUES ('checksum_blog', false, 'Y13eA45ymAAMsClsMzlepXW0vibNo9wYJ3URwMEeaZs', 'v3.5.0--Y13eA45ymAAMsClsMzlepXW0vibNo9wYJ3URwMEeaZs', 'QOJhpQWPab0Ib9r8JPs6OlE1Z4C6Zdq538t0QWAzkuw'); -- meta
+DROP TABLE IF EXISTS _content_blog; -- structure
+CREATE TABLE IF NOT EXISTS _content_blog (id TEXT PRIMARY KEY, "title" VARCHAR, "body" TEXT, "date" VARCHAR, "description" VARCHAR, "draft" BOOLEAN DEFAULT false, "extension" VARCHAR, "layout" VARCHAR NULL, "meta" TEXT, "navigation" TEXT DEFAULT true, "path" VARCHAR, "seo" TEXT DEFAULT '{}', "stem" VARCHAR, "tags" TEXT NULL, "__hash__" TEXT UNIQUE); -- structure
+UPDATE _content_info SET ready = true WHERE id = 'checksum_blog'; -- meta

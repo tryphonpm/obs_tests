@@ -1,0 +1,173 @@
+@import "tailwindcss";
+
+/* ============================================================
+   THEME — source unique de vérité pour tout le projet
+   ============================================================ */
+@theme {
+
+  /* --- Palette --- */
+  --color-brand-50:  #fffbeb;
+  --color-brand-100: #fef3c7;
+  --color-brand-200: #fde68a;
+  --color-brand-300: #fcd34d;
+  --color-brand-400: #fbbf24;   /* accent principal (amber-400) */
+  --color-brand-500: #f59e0b;
+  --color-brand-600: #d97706;
+  --color-brand-700: #b45309;
+
+  --color-surface-0:   #000000;
+  --color-surface-50:  #0a0a0a;
+  --color-surface-100: #141414;
+  --color-surface-200: #1e1e1e;
+  --color-surface-300: #2a2a2a;
+  --color-surface-400: #3d3d3d;
+  --color-surface-500: #555555;
+  --color-surface-600: #737373;
+  --color-surface-700: #a3a3a3;
+  --color-surface-800: #d4d4d4;
+  --color-surface-900: #f5f5f5;
+
+  /* --- Fontes --- */
+  --font-display: "DM Serif Display", Georgia, serif;
+  --font-sans:    "Inter", system-ui, sans-serif;
+  --font-mono:    "JetBrains Mono", "Fira Code", monospace;
+
+  /* --- Échelle typographique --- */
+  --text-2xs: 0.625rem;    /* 10px */
+  --text-xs:  0.75rem;     /* 12px */
+  --text-sm:  0.875rem;    /* 14px */
+  --text-base: 1rem;       /* 16px */
+  --text-lg:  1.125rem;    /* 18px */
+  --text-xl:  1.25rem;     /* 20px */
+  --text-2xl: 1.5rem;      /* 24px */
+  --text-3xl: 1.875rem;    /* 30px */
+  --text-4xl: 2.25rem;     /* 36px */
+  --text-5xl: 3rem;        /* 48px */
+  --text-6xl: 3.75rem;     /* 60px */
+  --text-7xl: 4.5rem;      /* 72px */
+
+  /* --- Letter-spacing --- */
+  --tracking-tight:   -0.025em;
+  --tracking-normal:  0em;
+  --tracking-wide:    0.05em;
+  --tracking-widest:  0.2em;
+
+  /* --- Durées d'animation --- */
+  --duration-fast:   80ms;
+  --duration-base:   200ms;
+  --duration-slow:   400ms;
+  --duration-slower: 800ms;
+
+  /* --- Border radius --- */
+  --radius-sm:  4px;
+  --radius-md:  8px;
+  --radius-lg:  16px;
+  --radius-xl:  24px;
+  --radius-full: 9999px;
+}
+
+/* ============================================================
+   BASE GLOBALE
+   ============================================================ */
+@layer base {
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    font-family: var(--font-sans);
+    color: var(--color-surface-900);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    line-height: 1.15;
+    letter-spacing: var(--tracking-tight);
+  }
+
+  code, pre, kbd {
+    font-family: var(--font-mono);
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+}
+
+/* ============================================================
+   COMPOSANTS UTILITAIRES RÉUTILISABLES
+   ============================================================ */
+@layer components {
+
+  /* Bouton principal */
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.625rem 1.25rem;
+    background-color: var(--color-brand-400);
+    color: var(--color-surface-0);
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    letter-spacing: var(--tracking-wide);
+    border-radius: var(--radius-md);
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: background-color var(--duration-base);
+  }
+  .btn-primary:hover {
+    background-color: var(--color-brand-500);
+  }
+
+  /* Bouton secondaire */
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.625rem 1.25rem;
+    background-color: transparent;
+    color: var(--color-surface-700);
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    border-radius: var(--radius-md);
+    border: 2px solid var(--color-surface-300);
+    cursor: pointer;
+    transition: border-color var(--duration-base), color var(--duration-base);
+  }
+  .btn-ghost:hover {
+    border-color: var(--color-brand-400);
+    color: var(--color-brand-400);
+  }
+
+  /* Carte */
+  .card {
+    border: 1px solid var(--color-surface-300);
+    border-radius: var(--radius-lg);
+    padding: 1.25rem;
+    transition: box-shadow var(--duration-base);
+  }
+  .card:hover {
+    box-shadow: 0 4px 24px 0 rgba(251, 191, 36, 0.1);
+  }
+
+  /* Label de tag */
+  .tag {
+    display: inline-block;
+    padding: 0.125rem 0.625rem;
+    background-color: var(--color-surface-200);
+    color: var(--color-brand-300);
+    font-size: var(--text-xs);
+    font-family: var(--font-mono);
+    letter-spacing: var(--tracking-wide);
+    border-radius: var(--radius-full);
+  }
+}
