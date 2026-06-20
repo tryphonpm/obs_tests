@@ -1,9 +1,6 @@
 {
   "compilerOptions": {
     "paths": {
-      "nuxt": [
-        "../node_modules/nuxt"
-      ],
       "@unhead/vue": [
         "../node_modules/@unhead/vue"
       ],
@@ -19,8 +16,14 @@
       "@nuxt/schema": [
         "../node_modules/nuxt/node_modules/@nuxt/schema"
       ],
+      "nuxt": [
+        "../node_modules/nuxt"
+      ],
       "@nuxtjs/mdc": [
         "../node_modules/@nuxtjs/mdc"
+      ],
+      "nitropack": [
+        "../node_modules/nitropack"
       ],
       "defu": [
         "../node_modules/defu"
@@ -39,9 +42,6 @@
       ],
       "unplugin-vue-router/client": [
         "../node_modules/unplugin-vue-router/client"
-      ],
-      "nitropack": [
-        "../node_modules/nitropack"
       ],
       "vite/client": [
         "../node_modules/vite/client"
