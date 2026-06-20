@@ -1,4 +1,4 @@
-export type LayoutKey = "default" | "obs-1"
+export type LayoutKey = "default"
 declare module 'nitropack' {
   interface NitroRouteConfig {
     appLayout?: LayoutKey | false

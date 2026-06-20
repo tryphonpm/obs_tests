@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "./themes/enrichment.css";
 
 /* ============================================================
    THEME — source unique de vérité pour tout le projet

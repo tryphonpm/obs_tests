@@ -102,53 +102,76 @@ const paragraphs = computed<EnrichedParagraph[]>(() => {
 
 <style scoped>
 .enriched-text {
+  position: relative;
   display: grid;
-  gap: 1.15rem;
-  color: var(--color-surface-700);
-  font-family: var(--font-sans);
-  font-size: var(--text-base);
-  line-height: 1.7;
+  gap: var(--spacing-enrichment-paragraph-gap);
+  padding: var(--spacing-enrichment-padding-block) var(--spacing-enrichment-padding-inline);
+  overflow: hidden;
+  border: 1px solid var(--color-enrichment-border);
+  border-radius: var(--radius-enrichment-panel);
+  background:
+    radial-gradient(circle at top left, var(--color-enrichment-glow), transparent 34rem),
+    linear-gradient(145deg, var(--color-enrichment-background-soft), var(--color-enrichment-background));
+  box-shadow: var(--shadow-enrichment-panel);
+  color: var(--color-enrichment-text);
+  font-family: var(--font-enrichment-body);
+  font-size: var(--text-enrichment-body);
+  line-height: var(--leading-enrichment-body);
+}
+
+.enriched-text::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--color-enrichment-text-muted) 10%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--color-enrichment-text-muted) 8%, transparent) 1px, transparent 1px);
+  background-size: 2rem 2rem;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.42), transparent 62%);
 }
 
 .enriched-text__paragraph {
   position: relative;
   display: grid;
-  grid-template-columns: 2.5rem minmax(0, 1fr);
-  gap: 1rem;
+  grid-template-columns: var(--spacing-enrichment-index-column) minmax(0, 1fr);
+  gap: var(--spacing-enrichment-column-gap);
 }
 
 .enriched-text__paragraph::before {
   content: "";
   position: absolute;
-  left: 3.05rem;
-  top: 0.4rem;
-  bottom: 0.35rem;
-  width: 1px;
+  left: var(--spacing-enrichment-rule-left);
+  top: var(--spacing-enrichment-rule-top);
+  bottom: var(--spacing-enrichment-rule-bottom);
+  width: var(--spacing-enrichment-rule-width);
   background: linear-gradient(
     to bottom,
-    color-mix(in srgb, var(--color-brand-400) 55%, transparent),
+    var(--color-enrichment-rule),
     transparent
   );
+  box-shadow: 0 0 18px var(--color-enrichment-glow);
 }
 
 .enriched-text__paragraph-index {
   align-self: start;
-  color: var(--color-brand-400);
-  font-family: var(--font-mono);
-  font-size: var(--text-xs);
-  letter-spacing: var(--tracking-wide);
-  opacity: 0.75;
+  color: var(--color-enrichment-accent);
+  font-family: var(--font-enrichment-meta);
+  font-size: var(--text-enrichment-meta);
+  letter-spacing: var(--tracking-enrichment-meta);
+  opacity: var(--opacity-enrichment-meta);
 }
 
 .enriched-text__lines {
   display: grid;
-  gap: 0.15rem;
+  gap: var(--spacing-enrichment-line-gap);
   margin: 0;
 }
 
 .enriched-text__line {
   display: block;
-  margin-left: calc(var(--indent-level) * 1.35rem);
+  margin-left: calc(var(--indent-level) * var(--spacing-enrichment-indent-step));
   text-wrap: pretty;
+  text-shadow: 0 0 16px color-mix(in srgb, var(--color-enrichment-text) 16%, transparent);
 }
 </style>
