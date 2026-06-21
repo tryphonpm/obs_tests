@@ -468,18 +468,28 @@ const columns = computed<EnrichedBlock[][]>(() => {
 }
 
 .enriched-text__marked {
+  position: relative;
   display: block;
   width: fit-content;
   max-width: 100%;
   margin-left: auto;
   padding: 0.3rem 0.9rem 0.3rem calc(0.9rem + 15px);
-  border-radius: var(--radius-sm);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
   background-color: var(--color-book-marked-background);
   color: var(--color-book-marked-text);
   font-family: "Libertinus Mono", monospace;
   font-size: 0.75em;
   text-align: right;
   white-space: pre-line;
+}
+
+.enriched-text__marked::before {
+  content: "";
+  position: absolute;
+  inset-block: 0;
+  inset-inline-start: 0;
+  width: 10px;
+  background: linear-gradient(to bottom, var(--color-book-marked-background), #ffffff);
 }
 
 .enriched-text__rule,
