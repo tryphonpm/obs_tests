@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Home</h1>
-    <p><NuxtLink to="/test_1">Test 1</NuxtLink></p>
+
+    <p><NuxtLink to="/arts_billes_corps.vue">Arts, Billes, Corps</NuxtLink></p>
   </div>
 </template>

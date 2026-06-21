@@ -1,0 +1,39 @@
+/* ============================================================
+   THEME — reproduction graphique page livre (PDF p.46)
+   Source : bac_a_fables-chap_1_bookelis_txt_v2-p46.pdf
+   Format A4 portrait 595 × 842 pt
+   ============================================================ */
+@theme {
+  /* --- Page (marges extraites du PDF) --- */
+  --spacing-book-margin-inline-start: 60.4pt;
+  --spacing-book-margin-inline-end: 20.5pt;
+  --spacing-book-margin-block-start: 93.8pt;
+  --spacing-book-margin-block-end: 89.4pt;
+  --spacing-book-column-gap: 28pt;
+  --spacing-book-column-min-width: 326.4pt;
+  --spacing-book-paragraph-gap: 12.59pt;
+  --spacing-book-line-gap: 0;
+  --spacing-book-indent-step: 1.35rem;
+
+  /* --- Typographie (tailles extraites du PDF) --- */
+  --font-book-body: "EB Garamond", "Libertinus Serif", Georgia, serif;
+  --font-book-title: var(--font-book-body);
+  --font-book-meta: var(--font-book-body);
+  --font-book-dropcap: "Pompei", Georgia, serif;
+
+  --text-book-body: 12.59pt;
+  --text-book-title: 51.1pt;
+  --text-book-dropcap-lines: 3;
+  --text-book-meta: 16.79pt;
+
+  --leading-book-body: 1.35;
+  --tracking-book-body: 0em;
+
+  /* --- Couleurs (PDF : fond blanc, texte noir) --- */
+  --color-book-background: #ffffff;
+  --color-book-text: #000000;
+  --color-book-text-muted: #505050;
+  --color-book-rule: #808080;
+  --color-book-marked-background: #e8e8e8;
+  --color-book-marked-text: #333333;
+}

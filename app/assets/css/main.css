@@ -1,5 +1,14 @@
 @import "tailwindcss";
+@import "./themes/book-page.css";
 @import "./themes/enrichment.css";
+
+@font-face {
+  font-family: "Pompei";
+  src: url("/fonts/Pompei.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 /* ============================================================
    THEME — source unique de vérité pour tout le projet
@@ -30,6 +39,7 @@
 
   /* --- Fontes --- */
   --font-display: "DM Serif Display", Georgia, serif;
+  --font-quote:   "EB Garamond", Georgia, serif;
   --font-sans:    "Inter", system-ui, sans-serif;
   --font-mono:    "JetBrains Mono", "Fira Code", monospace;
 
@@ -170,5 +180,60 @@
     font-family: var(--font-mono);
     letter-spacing: var(--tracking-wide);
     border-radius: var(--radius-full);
+  }
+
+  .title-blockquote {
+    margin: 0 0 var(--spacing-book-paragraph-gap);
+    color: var(--color-book-text);
+    font-family: var(--font-book-title);
+    font-size: var(--text-book-title);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: var(--tracking-book-body);
+  }
+
+  .book-page {
+    box-sizing: border-box;
+    width: fit-content;
+    max-width: 100%;
+    min-width: min(100%, 595pt);
+    min-height: 842pt;
+    margin: 0;
+    overflow-x: auto;
+    padding:
+      var(--spacing-book-margin-block-start)
+      var(--spacing-book-margin-inline-end)
+      var(--spacing-book-margin-block-end)
+      var(--spacing-book-margin-inline-start);
+    background: var(--color-book-background);
+    color: var(--color-book-text);
+  }
+
+  .book-page__number {
+    margin-top: calc(var(--spacing-book-paragraph-gap) * 2);
+    color: var(--color-book-text);
+    font-family: var(--font-book-meta);
+    font-size: var(--text-book-meta);
+    text-align: center;
+  }
+
+  .nav-marked-link {
+    display: inline-flex;
+    width: fit-content;
+    max-width: 100%;
+    padding: 0.2rem 0.6rem;
+    border-radius: var(--radius-sm);
+    background-color: var(--color-book-marked-background);
+    color: var(--color-book-marked-text);
+    font-family: var(--font-book-body);
+    font-size: var(--text-book-body);
+    text-shadow: none;
+    white-space: nowrap;
+    transition: background-color var(--duration-base), color var(--duration-base);
+  }
+
+  .nav-marked-link:hover {
+    background-color: var(--color-book-text);
+    color: var(--color-book-background);
   }
 }
