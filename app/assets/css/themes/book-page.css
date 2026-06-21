@@ -7,10 +7,15 @@
   /* --- Page (marges extraites du PDF) --- */
   --spacing-book-margin-inline-start: 60.4pt;
   --spacing-book-margin-inline-end: 20.5pt;
-  --spacing-book-margin-block-start: 93.8pt;
-  --spacing-book-margin-block-end: 89.4pt;
+  --spacing-book-margin-block-start: 23.45pt;
+  --spacing-book-margin-block-end: 22.35pt;
   --spacing-book-column-gap: 28pt;
   --spacing-book-column-min-width: 326.4pt;
+  --spacing-book-column-count-max: 4;
+  --spacing-book-page-content-max-width: calc(
+    var(--spacing-book-column-count-max) * var(--spacing-book-column-min-width)
+    + (var(--spacing-book-column-count-max) - 1) * var(--spacing-book-column-gap)
+  );
   --spacing-book-paragraph-gap: 12.59pt;
   --spacing-book-line-gap: 0;
   --spacing-book-indent-step: 1.35rem;
@@ -22,12 +27,16 @@
   --font-book-dropcap: "Pompei", Georgia, serif;
 
   --text-book-body: 12.59pt;
-  --text-book-title: 51.1pt;
+  --text-book-title: 25.55pt;
   --text-book-dropcap-lines: 3.6;
   --text-book-meta: 16.79pt;
 
   --leading-book-body: 1.35;
+  --leading-book-title: 1;
   --tracking-book-body: 0em;
+  --spacing-book-title-rule-width: 0.7pt;
+  --spacing-book-title-rule-gap: 5pt;
+  --spacing-book-title-margin-bottom: 12.59pt;
 
   /* --- Couleurs (PDF : fond blanc, texte noir) --- */
   --color-book-background: #ffffff;

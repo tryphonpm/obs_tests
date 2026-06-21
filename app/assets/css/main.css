@@ -183,23 +183,39 @@
   }
 
   .title-blockquote {
-    margin: 0 0 var(--spacing-book-paragraph-gap);
+    box-sizing: border-box;
+    width: var(--spacing-book-column-min-width);
+    max-width: 100%;
+    margin: 0 0 var(--spacing-book-title-margin-bottom);
+    padding: var(--spacing-book-title-rule-gap) 0;
+    border: 0;
+    border-block: var(--spacing-book-title-rule-width) solid var(--color-book-text);
     color: var(--color-book-text);
     font-family: var(--font-book-title);
     font-size: var(--text-book-title);
+    font-style: normal;
     font-weight: 700;
-    line-height: 1.05;
+    line-height: var(--leading-book-title);
     letter-spacing: var(--tracking-book-body);
+    text-align: left;
+  }
+
+  .layout-main {
+    padding-block: 0.625rem;
+  }
+
+  .layout-footer {
+    margin-top: 1.25rem;
   }
 
   .book-page {
     box-sizing: border-box;
     width: fit-content;
-    max-width: 100%;
+    max-width: none;
     min-width: min(100%, 595pt);
-    min-height: 842pt;
+    min-height: auto;
     margin: 0;
-    overflow-x: auto;
+    overflow-x: visible;
     padding:
       var(--spacing-book-margin-block-start)
       var(--spacing-book-margin-inline-end)

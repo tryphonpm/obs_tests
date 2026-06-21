@@ -384,8 +384,12 @@ const columns = computed<EnrichedBlock[][]>(() => {
 <style scoped>
 .enriched-text {
   position: relative;
-  width: max-content;
-  max-width: 100%;
+  width: calc(
+    var(--col-count) * var(--spacing-enrichment-column-min-width)
+    + (var(--col-count) - 1) * var(--spacing-enrichment-column-gap)
+  );
+  max-width: var(--spacing-book-page-content-max-width);
+  min-width: var(--spacing-enrichment-column-min-width);
   color: var(--color-enrichment-text);
   font-family: var(--font-enrichment-body);
   font-size: var(--text-enrichment-body);
@@ -401,7 +405,7 @@ const columns = computed<EnrichedBlock[][]>(() => {
 .enriched-text__column {
   display: flex;
   flex-direction: column;
-  flex: 1 1 var(--spacing-enrichment-column-min-width);
+  flex: 0 0 var(--spacing-enrichment-column-min-width);
   gap: var(--spacing-enrichment-paragraph-gap);
   min-width: var(--spacing-enrichment-column-min-width);
 }
