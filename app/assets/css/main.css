@@ -237,3 +237,17 @@
     color: var(--color-book-background);
   }
 }
+
+@utility enrichment-dropcap {
+  display: inline-block;
+  float: left;
+  box-sizing: content-box;
+  margin: 0;
+  padding-right: 3px;
+  color: var(--color-book-text);
+  font-family: var(--font-book-dropcap);
+  font-size: calc(var(--text-book-dropcap-lines) * var(--leading-book-body) * 1em);
+  line-height: 1;
+  vertical-align: top;
+  shape-outside: border-box;
+}

@@ -33,13 +33,12 @@ type EnrichedColBreakBlock = {
   kind: 'col-break'
 }
 
-type EnrichedBlock = EnrichedParagraphBlock | EnrichedRuleBlock | EnrichedColBreakBlock
-
-type DropcapContent = {
-  dropcap: string | null
-  dropcapLines: EnrichedLine[]
-  remainingContent: string
+type EnrichedEspaceBlock = {
+  id: string
+  kind: 'espace'
 }
+
+type EnrichedBlock = EnrichedParagraphBlock | EnrichedRuleBlock | EnrichedColBreakBlock | EnrichedEspaceBlock
 
 const props = withDefaults(defineProps<{
   content: string
@@ -135,57 +134,6 @@ function createEnrichedLine(rawLine: string, lineId: string, lineIndexInParagrap
   }
 }
 
-function splitDropcapContent(content: string): DropcapContent {
-  const normalizedContent = content.replace(/\r\n/g, '\n').replace(/\r/g, '\n')
-  const lines = normalizedContent.split('\n')
-  const dropcapRawLines: string[] = []
-  const dropcapLineIndices = new Set<number>()
-
-  for (let lineIndex = 0; lineIndex < lines.length && dropcapRawLines.length < 3; lineIndex += 1) {
-    if (lines[lineIndex]?.trim().length === 0) {
-      continue
-    }
-
-    dropcapRawLines.push(lines[lineIndex]!)
-    dropcapLineIndices.add(lineIndex)
-  }
-
-  if (dropcapRawLines.length === 0) {
-    return {
-      dropcap: null,
-      dropcapLines: [],
-      remainingContent: normalizedContent,
-    }
-  }
-
-  const firstLineText = dropcapRawLines[0]!.trimStart()
-  const dropcap = firstLineText.charAt(0) || null
-  const dropcapLines: EnrichedLine[] = []
-  const firstLineRemainder = firstLineText.slice(1)
-
-  if (firstLineRemainder.length > 0) {
-    dropcapLines.push(createEnrichedLine(firstLineRemainder, 'dropcap-line-0', 0))
-  }
-
-  for (let lineIndex = 1; lineIndex < dropcapRawLines.length; lineIndex += 1) {
-    dropcapLines.push(createEnrichedLine(
-      dropcapRawLines[lineIndex]!,
-      `dropcap-line-${lineIndex}`,
-      lineIndex,
-    ))
-  }
-
-  const remainingContent = lines
-    .filter((_, lineIndex) => !dropcapLineIndices.has(lineIndex))
-    .join('\n')
-
-  return {
-    dropcap,
-    dropcapLines,
-    remainingContent,
-  }
-}
-
 function parseBlocks(content: string): EnrichedBlock[] {
   const normalizedContent = preserveMultilineTaggedBlocks(
     content.replace(/\r\n/g, '\n').replace(/\r/g, '\n'),
@@ -196,6 +144,7 @@ function parseBlocks(content: string): EnrichedBlock[] {
   let paragraphCount = 0
   let ruleCount = 0
   let colBreakCount = 0
+  let espaceCount = 0
 
   function closeParagraph() {
     if (currentLines.length === 0) {
@@ -241,6 +190,16 @@ function parseBlocks(content: string): EnrichedBlock[] {
       return
     }
 
+    if (/^<espace\s*\/?>$/i.test(trimmedLine)) {
+      closeParagraph()
+      parsedBlocks.push({
+        id: `espace-${espaceCount}`,
+        kind: 'espace',
+      })
+      espaceCount += 1
+      return
+    }
+
     currentLines.push(createEnrichedLine(
       line,
       `paragraph-${paragraphCount}-line-${currentLines.length}`,
@@ -253,9 +212,72 @@ function parseBlocks(content: string): EnrichedBlock[] {
   return parsedBlocks
 }
 
-const dropcapContent = computed(() => splitDropcapContent(props.content))
+function extractDropcapFromBlocks(blocks: EnrichedBlock[]): {
+  letter: string | null
+  blocks: EnrichedBlock[]
+} {
+  for (let blockIndex = 0; blockIndex < blocks.length; blockIndex += 1) {
+    const block = blocks[blockIndex]!
 
-const blocks = computed(() => parseBlocks(dropcapContent.value.remainingContent))
+    if (block.kind !== 'paragraph') {
+      continue
+    }
+
+    for (let lineIndex = 0; lineIndex < block.lines.length; lineIndex += 1) {
+      const line = block.lines[lineIndex]!
+
+      for (let segmentIndex = 0; segmentIndex < line.segments.length; segmentIndex += 1) {
+        const segment = line.segments[segmentIndex]!
+
+        if (segment.kind === 'rule' || segment.text.length === 0) {
+          continue
+        }
+
+        const letter = segment.text.charAt(0)
+
+        return {
+          letter,
+          blocks: blocks.map((currentBlock, currentBlockIndex) => {
+            if (currentBlock.kind !== 'paragraph' || currentBlockIndex !== blockIndex) {
+              return currentBlock
+            }
+
+            return {
+              ...currentBlock,
+              lines: currentBlock.lines.map((currentLine, currentLineIndex) => {
+                if (currentLineIndex !== lineIndex) {
+                  return currentLine
+                }
+
+                return {
+                  ...currentLine,
+                  segments: currentLine.segments.map((currentSegment, currentSegmentIndex) => {
+                    if (currentSegmentIndex !== segmentIndex) {
+                      return currentSegment
+                    }
+
+                    return {
+                      ...currentSegment,
+                      text: currentSegment.text.slice(1),
+                    }
+                  }),
+                }
+              }),
+            }
+          }),
+        }
+      }
+    }
+  }
+
+  return { letter: null, blocks }
+}
+
+const parsedContent = computed(() => extractDropcapFromBlocks(parseBlocks(props.content)))
+
+const dropcap = computed(() => parsedContent.value.letter)
+
+const blocks = computed(() => parsedContent.value.blocks)
 
 const columns = computed<EnrichedBlock[][]>(() => {
   const cols: EnrichedBlock[][] = [[]]
@@ -280,48 +302,6 @@ const columns = computed<EnrichedBlock[][]>(() => {
     aria-label="Texte enrichi"
     :style="{ '--col-count': columns.length }"
   >
-    <div
-      v-if="dropcapContent.dropcap"
-      class="enriched-text__dropcap-row"
-    >
-      <div
-        class="enriched-text__dropcap-cell"
-        aria-hidden="true"
-      >
-        {{ dropcapContent.dropcap }}
-      </div>
-
-      <div class="enriched-text__dropcap-lines">
-        <p
-          v-for="line in dropcapContent.dropcapLines"
-          :key="line.id"
-          class="enriched-text__line"
-          :data-line-index="line.lineIndexInParagraph"
-          :style="{ '--indent-level': line.indentLevel }"
-        >
-          <template
-            v-for="segment in line.segments"
-            :key="segment.id"
-          >
-            <span
-              v-if="segment.kind === 'rule'"
-              class="enriched-text__rule"
-              role="separator"
-            />
-            <em
-              v-else-if="segment.kind === 'italic'"
-              class="enriched-text__italic"
-            >{{ segment.text }}</em>
-            <span
-              v-else-if="segment.kind === 'marked'"
-              class="enriched-text__marked"
-            >{{ segment.text }}</span>
-            <template v-else>{{ segment.text }}</template>
-          </template>
-        </p>
-      </div>
-    </div>
-
     <div class="enriched-text__columns">
       <div
         v-for="(column, columnIndex) in columns"
@@ -345,7 +325,15 @@ const columns = computed<EnrichedBlock[][]>(() => {
               {{ String(block.paragraphIndexInPage + 1).padStart(2, '0') }}
             </span>
 
-            <p class="enriched-text__lines">
+            <div class="enriched-text__lines">
+              <div
+                v-if="dropcap && columnIndex === 0 && block.paragraphIndexInPage === 0"
+                class="enrichment-dropcap"
+                aria-hidden="true"
+              >
+                {{ dropcap }}
+              </div>
+
               <span
                 v-for="line in block.lines"
                 :key="line.id"
@@ -373,11 +361,17 @@ const columns = computed<EnrichedBlock[][]>(() => {
                   <template v-else>{{ segment.text }}</template>
                 </template>
               </span>
-            </p>
+            </div>
           </section>
 
+          <div
+            v-else-if="block.kind === 'espace'"
+            class="enriched-text__espace"
+            aria-hidden="true"
+          />
+
           <span
-            v-else
+            v-else-if="block.kind === 'rule'"
             class="enriched-text__block-rule"
             role="separator"
           />
@@ -398,27 +392,6 @@ const columns = computed<EnrichedBlock[][]>(() => {
   line-height: var(--leading-enrichment-body);
 }
 
-.enriched-text__dropcap-row {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.35em;
-  margin-bottom: var(--spacing-enrichment-paragraph-gap);
-}
-
-.enriched-text__dropcap-cell {
-  flex-shrink: 0;
-  color: var(--color-enrichment-text);
-  font-family: var(--font-book-dropcap);
-  font-size: calc(var(--text-book-dropcap-lines) * var(--leading-book-body) * 1em);
-  line-height: 1;
-  min-height: calc(var(--text-book-dropcap-lines) * var(--leading-book-body) * 1em);
-}
-
-.enriched-text__dropcap-lines {
-  flex: 1;
-  min-width: 0;
-}
-
 .enriched-text__columns {
   display: flex;
   gap: var(--spacing-enrichment-column-gap);
@@ -426,7 +399,8 @@ const columns = computed<EnrichedBlock[][]>(() => {
 }
 
 .enriched-text__column {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   flex: 1 1 var(--spacing-enrichment-column-min-width);
   gap: var(--spacing-enrichment-paragraph-gap);
   min-width: var(--spacing-enrichment-column-min-width);
@@ -436,6 +410,7 @@ const columns = computed<EnrichedBlock[][]>(() => {
   display: grid;
   grid-template-columns: var(--spacing-enrichment-index-column) minmax(0, 1fr);
   gap: var(--spacing-enrichment-column-gap);
+  margin: 0;
 }
 
 .enriched-text--no-indexes .enriched-text__paragraph {
@@ -452,20 +427,40 @@ const columns = computed<EnrichedBlock[][]>(() => {
 }
 
 .enriched-text__lines {
-  display: grid;
-  gap: var(--spacing-enrichment-line-gap);
+  display: block;
   margin: 0;
+}
+
+.enriched-text__lines:has(.enrichment-dropcap)::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.enrichment-dropcap {
+  display: inline-block;
+  float: left;
+  box-sizing: content-box;
+  margin: 0;
+  padding-right: 10px;
+  color: var(--color-enrichment-text);
+  font-family: var(--font-book-dropcap);
+  font-size: calc(var(--text-book-dropcap-lines) * var(--leading-book-body) * 1em);
+  line-height: 1;
+  vertical-align: top;
+  shape-outside: border-box;
 }
 
 .enriched-text__line {
   display: block;
+  line-height: var(--leading-enrichment-body);
   margin-left: calc(var(--indent-level) * var(--spacing-enrichment-indent-step));
   white-space: nowrap;
 }
 
 .enriched-text__italic {
   font-style: italic;
-  white-space: pre-line;
+  white-space: pre;
 }
 
 .enriched-text__marked {
@@ -491,5 +486,12 @@ const columns = computed<EnrichedBlock[][]>(() => {
   margin: var(--spacing-enrichment-paragraph-gap) 0;
   background: var(--color-enrichment-rule);
   border: 0;
+}
+
+.enriched-text__espace {
+  display: block;
+  flex-shrink: 0;
+  height: 0;
+  margin: 0;
 }
 </style>
