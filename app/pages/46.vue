@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import textContent from '../../public/texts/arts_billes_corps.txt?raw'
+import textContent from '../../public/texts/46.txt?raw'
 </script>
 
 <template>

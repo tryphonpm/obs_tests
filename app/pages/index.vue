@@ -1,6 +1,9 @@
 <template>
   <div>
-
-    <p><NuxtLink to="/arts_billes_corps">Arts, Billes, Corps</NuxtLink></p>
+<div class="mt-100">
+  <p><NuxtLink to="/36">La galaxie, le châtiment et le Kavalier</NuxtLink></p>
+  <p><NuxtLink to="/46">Arts, Billes, Corps</NuxtLink></p>
+</div>
+    
   </div>
 </template>

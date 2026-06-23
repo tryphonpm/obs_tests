@@ -10,6 +10,14 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Ropa Sans";
+  src: url("/fonts/Ropa_Sans/RopaSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* ============================================================
    THEME — source unique de vérité pour tout le projet
    ============================================================ */
@@ -81,14 +89,44 @@
    BASE GLOBALE
    ============================================================ */
 @layer base {
-  html, body {
+  html {
+    height: 100%;
+    overflow-x: auto;
+    overflow-y: scroll;
+    background-color: var(--color-book-background);
+  }
+
+  body {
+    position: relative;
     margin: 0;
     padding: 0;
+    min-height: 100%;
+    overflow-x: auto;
+    overflow-y: visible;
     background: transparent;
     font-family: var(--font-sans);
     color: var(--color-surface-900);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-color: var(--color-book-background);
+    background-image: url('/textures/Texturelabs_Paper_370M.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    transform: translateZ(0);
+  }
+
+  #__nuxt {
+    position: relative;
+    overflow: visible;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -186,7 +224,7 @@
     box-sizing: border-box;
     width: var(--spacing-book-column-min-width);
     max-width: 100%;
-    margin: 0 0 var(--spacing-book-title-margin-bottom);
+    margin: 20px 0 var(--spacing-book-title-margin-bottom);
     padding: var(--spacing-book-title-rule-gap) 0;
     border: 0;
     border-block: var(--spacing-book-title-rule-width) solid var(--color-book-text);
@@ -194,14 +232,23 @@
     font-family: var(--font-book-title);
     font-size: var(--text-book-title);
     font-style: normal;
-    font-weight: 700;
-    line-height: var(--leading-book-title);
+    font-weight: 400;
+    line-height: 1.15;
     letter-spacing: var(--tracking-book-body);
     text-align: left;
+    overflow: visible;
+  }
+
+  .layout-page {
+    position: relative;
+    isolation: isolate;
+    color: var(--color-book-text);
   }
 
   .layout-main {
-    padding-block: 0.625rem;
+    position: relative;
+    z-index: 1;
+    padding-block: 0;
   }
 
   .layout-footer {
@@ -215,18 +262,18 @@
     min-width: min(100%, 595pt);
     min-height: auto;
     margin: 0;
-    overflow-x: visible;
+    overflow: visible;
     padding:
-      var(--spacing-book-margin-block-start)
+      0
       var(--spacing-book-margin-inline-end)
-      var(--spacing-book-margin-block-end)
+      0
       var(--spacing-book-margin-inline-start);
-    background: var(--color-book-background);
+    background: transparent;
     color: var(--color-book-text);
   }
 
   .book-page__number {
-    margin-top: calc(var(--spacing-book-paragraph-gap) * 2);
+    margin-top: var(--spacing-book-paragraph-gap);
     color: var(--color-book-text);
     font-family: var(--font-book-meta);
     font-size: var(--text-book-meta);

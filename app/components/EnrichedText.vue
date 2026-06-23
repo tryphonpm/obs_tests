@@ -378,6 +378,14 @@ const columns = computed<EnrichedBlock[][]>(() => {
         </template>
       </div>
     </div>
+
+    <div class="enriched-text__footer">
+      <NuxtLink
+        to="/"
+        class="enriched-text__nav-btn"
+        aria-label="Retour à l'accueil"
+      />
+    </div>
   </article>
 </template>
 
@@ -473,9 +481,9 @@ const columns = computed<EnrichedBlock[][]>(() => {
   width: fit-content;
   max-width: 100%;
   margin-left: auto;
-  padding: 0.3rem 0.9rem 0.3rem calc(0.9rem + 15px);
+  padding: 1rem 1rem 1rem calc(0.9rem + 60px);
   border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-  background-color: var(--color-book-marked-background);
+  background-color: color-mix(in srgb, var(--color-book-marked-background) 50%, transparent);
   color: var(--color-book-marked-text);
   font-family: "Libertinus Mono", monospace;
   font-size: 0.75em;
@@ -489,7 +497,11 @@ const columns = computed<EnrichedBlock[][]>(() => {
   inset-block: 0;
   inset-inline-start: 0;
   width: 10px;
-  background: linear-gradient(to bottom, var(--color-book-marked-background), #ffffff);
+  background: linear-gradient(
+    to bottom,
+    color-mix(in srgb, var(--color-book-marked-background) 50%, transparent),
+    color-mix(in srgb, #ffffff 10%, transparent)
+  );
 }
 
 .enriched-text__rule,
@@ -507,5 +519,29 @@ const columns = computed<EnrichedBlock[][]>(() => {
   flex-shrink: 0;
   height: 0;
   margin: 0;
+}
+
+.enriched-text__footer {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: var(--spacing-enrichment-paragraph-gap);
+}
+
+.enriched-text__nav-btn {
+  display: block;
+  width: 14px;
+  height: 14px;
+  background-color: #333333;
+  transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+.enriched-text__nav-btn:hover {
+  background-color: #4a4a4a;
+}
+
+.enriched-text__nav-btn:active {
+  background-color: #222222;
+  transform: scale(0.92);
 }
 </style>
