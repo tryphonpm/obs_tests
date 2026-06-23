@@ -1,9 +1,8 @@
 <script setup lang="ts">
-import textContent from '../../public/texts/46.txt?raw'
-import pageTitleRaw from '../../public/texts/46.title.txt?raw'
+import textContent from '../../public/texts/52.txt?raw'
 
-const pageLabel = '46'
-const pageTitle = pageTitleRaw.trim()
+const pageLabel = '52'
+const pageTitle = "La machette à couper les nombrils."
 </script>
 
 <template>

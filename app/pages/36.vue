@@ -1,11 +1,15 @@
 <script setup lang="ts">
 import textContent from '../../public/texts/36.txt?raw'
+import pageTitleRaw from '../../public/texts/36.title.txt?raw'
+
+const pageLabel = '36'
+const pageTitle = pageTitleRaw.trim()
 </script>
 
 <template>
   <article class="book-page">
     <blockquote class="title-blockquote">
-      La galaxie, le châtiment et le Kavalier.
+      {{ pageTitle }}
     </blockquote>
 
     <EnrichedText
@@ -14,7 +18,7 @@ import textContent from '../../public/texts/36.txt?raw'
     />
 
     <p class="book-page__number">
-      - 36 -
+      - {{ pageLabel }} -
     </p>
   </article>
 </template>
