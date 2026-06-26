@@ -2,8 +2,10 @@ L’excuse de la girafe
 Une guerrière lourde toute harnachée
  débarque d’une trirème
  et s’assoit sur le rebord croisé de la digue.
+
 Elle fume avec un horizon d’avance et initialise le tout :
  <i>«On entend ? On entend pas, Et maintenant entend-on ? »</i>
+
 Je comprends vite d’où je parle :
  Loin... out of my league.
 Son grade a un chef mais il n’existe presque pas.
@@ -24,18 +26,22 @@ Un bon point pour lui :
   chaque jour à l’embauche,
     le même débarquement brutal
     sur les mêmes barges plongeantes de son pouvoir.
+
 C’est elle qui tient le monde d’ici car elle s’est levée.
  C’est elle qui le consume par pillages.
  Son péplum s’ouvre crûment sur les foules.
  Une avalanche de tresses mouillées,
   frappe ses reins à chaque pas,
     chaque matin, au même moment.
+
 Et chaque matin, l’âne +1 renonce à lui-même,
-et ravale la version symbolique de sa médiocrité passive. 
+et ravale la version symbolique de sa médiocrité passive.
+<col>
 Quant aux traces de la route laissées dans les basses fosses,
  elles obligent la noire walkyrie des sables
  au marbre des raccourcis kouchites
  et à la tolérance d’une maison aux corps sans repos.
+
 Elle s’appuie sur un reste de trottoirs qu’elle reforge en courbes.
 Ce sont ses courbes et leur théorie qui dominent l’ensemble.
 La démarche les fait siffler en trombes coupantes.
@@ -44,20 +50,25 @@ La démarche les fait siffler en trombes coupantes.
  Toute cette chair de métal vrille, gondole
  et, sous l’intense transpiration de l’étambot dorsal,
   c’est encore mieux !
+
 Une fois l’escalier bien monté et bien redescendu,
   elle finit par présenter
  son statut de haute girafe en bonne et due forme ;
  elle savane parmi les herbes jaunes et les faux lions édentés.
+
 Une classe entière de scribes et leur technocratie retroéclairée
   couchera toute la story sur le vélin du plus fin papyrus.
 Restera une gomme arabique
  pour ajuster au plus près
   les comptes d’une première banqueroute
  et balancer le solde à la poubelle des plus pauvres.
+
 Dans ce labyrinthe à taureau,
   j’ai perdu mon fil.
  Moi aussi, j’ai fait mine d’oublier Ariane,
   la toute dévouée.
  Oubliée sur la première île du retour.
-Une seule excuse :  
-celle de Thésée.
+
+<espace>
+<m>Une seule excuse : 
+celle de Thésée.</m>

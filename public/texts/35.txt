@@ -1,67 +1,77 @@
 Le rôdeur signe à l’hôtel de son contrat
 J’avais pourtant préciser mon souhait
-  clairement : 
-  une chambre avec vue sur le monde.
- <i>« Monsieur , il y a une vue, assurément!  
- Ouvrez au moins les rideaux, s’il vous plaît  
- Et regardez mieux  »</i>.
+    clairement : 
+    une chambre avec vue sur le monde.
+
+  <i>« Monsieur , il y a une vue, assurément!  
+     Ouvrez au moins les rideaux, s’il vous plaît  
+     Et regardez mieux  »</i>.
+
 Les volets, les rideaux avaient imposé des vigiles,
- paires de cravates décasquées mal assorties au front.
- Ils bougeaient pour surprendre leur présence torve.
- Leur chant imberbe et primitif
-  masquait de drôles d’accents confus,
-  rocaillant contre les murs de la chambrée.
+  paires de cravates décasquées mal assorties au front.
+  Ils bougeaient pour surprendre leur présence torve.
+  Leur chant imberbe et primitif
+    masquait de drôles d’accents confus,
+    rocaillant contre les murs de la chambrée.
+
 Les tapis aussi participaient à l’enclosure de l’espace.
 J’étais ficelé, enroulé dans un petit paquet parfait,
- une pâtisserie du dimanche, avec ses boucles à ciseaux,
+  une pâtisserie du dimanche, avec ses boucles à ciseaux,
   ses têtes de nègres coincées de choux et de framboises,
- une boite à maintenir avec une rigueur toute horizontale :
-  surtout, ne rien gâcher de crémeux,
-  ne pas buter contre un marche à la Madeleine.
+  une boite à maintenir avec une rigueur toute horizontale :
+    surtout, ne rien gâcher de crémeux,
+    ne pas buter contre un marche à la Madeleine.
+
 Hors du verrou des téléphones intelligents qui me suivaient
- j’ai franchi le seuil d’une clochette à manège ;
- quelques tours d’une porte à tambour,
- et ma vie dut poursuivre sa saison ailleurs.
+  j’ai franchi le seuil d’une clochette à manège ;
+  quelques tours d’une porte à tambour,
+  et ma vie dut poursuivre sa saison ailleurs.
+
 Vu que personne ne semblait coïncider
- à la solitude d’enfant perdu que je trimbalais sur mon dos,
- j’ai pu faire quelques pas de côté, quasi incognito.
- Les loups discrets de la cuisine, celle des riches,
-  m’aidaient à mendier les restes,
-  le reste de ce qui reste.
- Ils ont grande connaissance de l’os
-  qu’il faut ronger pendant la saison des pluies
-  sans se casser les dents
- ronger ‘les nouveaux nœuds à la lanière du maître’.
- Le soir feuillu, venu à ma rencontre,
- j’ai étendu le lavoir de mes chemises
-  une à une,
-  aux branches disponibles de la Nature.
+  à la solitude d’enfant perdu que je trimbalais sur mon dos,
+  j’ai pu faire quelques pas de côté, quasi incognito.
+  Les loups discrets de la cuisine, celle des riches,
+    m’aidaient à mendier les restes,
+    le reste de ce qui reste.
+  Ils ont grande connaissance de l’os
+    qu’il faut ronger pendant la saison des pluies
+    sans se casser les dents
+  ronger ‘les nouveaux nœuds à la lanière du maître’.
+<col>
+Le soir feuillu, venu à ma rencontre,
+  j’ai étendu le lavoir de mes chemises
+    une à une,
+    aux branches disponibles de la Nature.
 Derrière, les rideaux insistent et surveillent encore.
 On déballe des savons, à chaque numéro d’étage,
- on plie des shorts à plat
-  sur le dos de pianos blancs demi-queue portés.
+  on plie des shorts à plat
+    sur le dos de pianos blancs demi-queue portés.
+
 Prêt ! Le cinéma cosmique pouvait lancer ses bobines :
- ouverture sur l’arrivée de l’inspecteur orné du district 
+  ouverture sur l’arrivée de l’inspecteur orné du district 
   (j’ai réussi à bailler ostensiblement en l’écoutant réciter),
- perquisition des lieux investis par suite de ma compagnie,
- saisie d’un formulaire et de l’alibi par défaut
- juste à temps pour la fermeture du service mandaté.
+  perquisition des lieux investis par suite de ma compagnie,
+  saisie d’un formulaire et de l’alibi par défaut
+  juste à temps pour la fermeture du service mandaté.
 Comme dans tous les bureaux,
- je signerai les yeux fermés.
- Le commerce des règlements ne me soumet plus beaucoup :
-  ‘je ne fais pourtant de mal à personne’.
- Je collaborerai donc facilement
-  au maintien idéal en l’état de l’empire qui progresse, 
-  c’est-à-dire le pourrissement accéléré des choses,
- et chaque fois que possible, j’éviterai les coups 
- qui enfoncent et perdent corps et paroles dans les marais.
-  <i>«Monsieur ,  
- Sachez que je n’honore plus aucune signature.  
- Avez-vous une parole  ? Pas moi.  
- Je ne tiens plus rien à jour ,  
-  je laisse la vigne à ses sarments. »</i>
-Dans la chambre à côté,  
+  je signerai les yeux fermés.
+  Le commerce des règlements ne me soumet plus beaucoup :
+    ‘je ne fais pourtant de mal à personne’.
+  Je collaborerai donc facilement
+    au maintien idéal en l’état de l’empire qui progresse, 
+    c’est-à-dire le pourrissement accéléré des choses,
+  et chaque fois que possible, j’éviterai les coups 
+  qui enfoncent et perdent corps et paroles dans les marais.
+  
+    <i>«Monsieur ,  
+    Sachez que je n’honore plus aucune signature.  
+    Avez-vous une parole  ? Pas moi.  
+    Je ne tiens plus rien à jour ,  
+        je laisse la vigne à ses sarments. »</i>
+
+<espace>
+<m>Dans la chambre à côté,  
 la victime émissaire est là  
 pour régler la note.  
 Partout – après –, on la vénère,  
-à la croisée vacante des hôtels du Nord.
+à la croisée vacante des hôtels du Nord.</m>

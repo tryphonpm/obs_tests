@@ -460,6 +460,7 @@ const columns = computed<EnrichedBlock[][]>(() => {
   font-size: calc(var(--text-book-dropcap-lines) * var(--leading-book-body) * 1em);
   line-height: 1;
   vertical-align: top;
+  transform: translateY(-5px);
   shape-outside: border-box;
 }
 

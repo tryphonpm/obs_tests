@@ -9,6 +9,7 @@ Peu de suspens
  redites enregistrées à l’avance sur des kilomètres.
 Tout sonne faux en philosophie du développé-couché,
  à commencer par les rires et les prédicats.
+
 Donc, au Walhalla, on s’emmerde.
 Les géants n’ont rien prévu pour la vie,
  une architecture sans foule
@@ -19,6 +20,7 @@ Il y a bien les Déesses pour le plaisir
  Leurs robes immaculées d’éternité
     ont une traîne qui n’en finit pas.
  C’est vraiment pénible, où poser les doigts ?
+
 Alors, les artistes bannis laissent leur place
  aux outils des artisans capables
  de découper des voiles couleur de temps.
@@ -29,10 +31,12 @@ Parmi eux, un boucher finira par dépecer le dernier âne
   sur les épaules d’une statue
   victime du gel
     et de l’humiliant défi des fientes.  
+
 Statues, les dieux dansent dans leur orgueil figé,
   incapables, même de taper du pied
  sur le plancher nuageux des cunimulonimgus
  dont la pluie pourrait transpirer sur nos champs. .
+<col>
 C’est un cauchemar mais pour en sortir
  il faudrait que tout ce joli monde translucide
   se mette un peu au boulot.
@@ -42,6 +46,7 @@ C’est un cauchemar mais pour en sortir
    à coups de fenwick dans les arcades
   et pour stresser l’épaisseur des murs célestes
       avec l’écho amplifié des trompes.
+
 Imaginons : il approche,
  ce chevalier en costume, crétin des Alpes,
  je le vois venir, ma sœur.
@@ -57,6 +62,7 @@ Il sait massacrer, massacrer l’innocence qu’il traque
   pour en pendre toutes les incarnations
   aux branches démultipliées
   des vergers aux fruits étranges.
+
 Son ombre sapiens s’allonge et touche
   la porte parfaitement stérile de l’édifice sacré.
  Bientôt les dieux sentiront son odeur,
@@ -69,6 +75,7 @@ Son ombre sapiens s’allonge et touche
   par ce jouet sauvage attendu
   qui pourrait bien arracher leur triste séant
       hors de l’ennui sans fin des ronces célestes.  
+<col>
 Pendant ce temps-là, les Dieux mâles
  rangent leurs papiers,
  clôturent leur comptabilité,
@@ -78,31 +85,42 @@ Pendant ce temps-là, les Dieux mâles
     héritière d’eux-mêmes,
   dans les espaces troués béants
    de leurs disques externes.
+
 Ils tremblent éternellement.
 Leurs spasmes initient et entretiennent le cosmos
  bien malgré eux,
  grâce à ces vibrations peureuses,
  chères ondes gravitationnelles qui font matière.
+
 Leur frayeur face à l’humain
  courbe ainsi l’espace-temps
  d’ininterrompus frissons oscillants par relativité générale.
-(Un temps pour le silence.)
+
+<espace>
+<i>(Un temps pour le silence.)</i>
+<espace>
 Enfin, on hurle à la porte.
  Monotonement.
+
 Personne ne bouge,
   on retient son souffle divin,
  on s’épie en énumérant les siècles...
+
 Et, pour en finir avec le jugement des hommes,
  Wotan oublie son or et hurle über alles :
  <i>« Aucune autorisation !  
     J’interdis toute livraison à domicile ce soir!  
-   D’ailleurs, ici, il n’y a pas de soir! »</i>Personne est allé ouvrir.
+   D’ailleurs, ici, il n’y a pas de soir! »</i>
+<col>
+Personne est allé ouvrir.
  Docilement.
+
 Notre héros auto-entrepreneur reste banni
  et poursuit noir sur blanc
   au loin, les mêmes questions
   à son cœur défendant
   et avec, bien en mains,
   la hache et le trident.
-Ainsi, notre destin !  
-Ainsi, ai-je zarathoustré ! 
+<espace>
+<m>Ainsi, notre destin !  
+Ainsi, ai-je zarathoustré !</m>

@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import textContent from '../../public/texts/46.txt?raw'
-import pageTitleRaw from '../../public/texts/46.title.txt?raw'
+import textContentRaw from '../../public/texts/46.txt?raw'
 
 const pageLabel = '46'
-const pageTitle = pageTitleRaw.trim()
+const pageTitle = "Art, billes, corps"
+const textContent = textContentRaw.replace(/\r\n/g, '\n').replace(/\r/g, '\n').split('\n').slice(1).join('\n')
 </script>
 
 <template>

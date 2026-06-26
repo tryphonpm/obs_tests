@@ -1,0 +1,332 @@
+[
+  {
+    "titre": "L’excuse de la girafe",
+    "page": 9,
+    "content_path": "public/texts/9.txt"
+  },
+  {
+    "titre": "Sept lieues",
+    "page": 10,
+    "content_path": "public/texts/10.txt"
+  },
+  {
+    "titre": "Monsieur Atroce et la main courante",
+    "page": 12,
+    "content_path": "public/texts/12.txt"
+  },
+  {
+    "titre": "Daimons de la rose",
+    "page": 14,
+    "content_path": "public/texts/14.txt"
+  },
+  {
+    "titre": "Le che rugit et se tait [sic].",
+    "page": 16,
+    "content_path": "public/texts/16.txt"
+  },
+  {
+    "titre": "Grossièrement contre le vrai",
+    "page": 17,
+    "content_path": "public/texts/17.txt"
+  },
+  {
+    "titre": "La forêt qui boite et l’arbre qui ne dit mot",
+    "page": 20,
+    "content_path": "public/texts/20.txt"
+  },
+  {
+    "titre": "L’imparfait, le don et son poison",
+    "page": 22,
+    "content_path": "public/texts/22.txt"
+  },
+  {
+    "titre": "De guerre lasse bien dégueulasse",
+    "page": 24,
+    "content_path": "public/texts/24.txt"
+  },
+  {
+    "titre": "Un matin anonyme face aux fidèles assoiffés",
+    "page": 25,
+    "content_path": "public/texts/25.txt"
+  },
+  {
+    "titre": "La justice comique des puits",
+    "page": 26,
+    "content_path": "public/texts/26.txt"
+  },
+  {
+    "titre": "Le piano à poings et la violence rémunérée",
+    "page": 28,
+    "content_path": "public/texts/28.txt"
+  },
+  {
+    "titre": "Comment va ton corps ?",
+    "page": 29,
+    "content_path": "public/texts/29.txt"
+  },
+  {
+    "titre": "L’apocalypse, mais de justesse",
+    "page": 30,
+    "content_path": "public/texts/30.txt"
+  },
+  {
+    "titre": "Round and round",
+    "page": 31,
+    "content_path": "public/texts/31.txt"
+  },
+  {
+    "titre": "Non, je suis ton père",
+    "page": 33,
+    "content_path": "public/texts/33.txt"
+  },
+  {
+    "titre": "Pont que tue le pas",
+    "page": 34,
+    "content_path": "public/texts/34.txt"
+  },
+  {
+    "titre": "Le rôdeur signe à l’hôtel de son contrat",
+    "page": 35,
+    "content_path": "public/texts/35.txt"
+  },
+  {
+    "titre": "La galaxie, le châtiment et le Kavalier",
+    "page": 36,
+    "content_path": "public/texts/36.txt"
+  },
+  {
+    "titre": "La variation du corps fêlé",
+    "page": 37,
+    "content_path": "public/texts/37.txt"
+  },
+  {
+    "titre": "Les deux chiens du cercle",
+    "page": 38,
+    "content_path": "public/texts/38.txt"
+  },
+  {
+    "titre": "Troyes à la suite, Champagne !",
+    "page": 39,
+    "content_path": "public/texts/39.txt"
+  },
+  {
+    "titre": "La tour à Boli",
+    "page": 40,
+    "content_path": "public/texts/40.txt"
+  },
+  {
+    "titre": "Un décroisé à l’asile",
+    "page": 42,
+    "content_path": "public/texts/42.txt"
+  },
+  {
+    "titre": "Le plateau bioluminescent des abysses",
+    "page": 44,
+    "content_path": "public/texts/44.txt"
+  },
+  {
+    "titre": "Le coq et la pendule, en triste",
+    "page": 45,
+    "content_path": "public/texts/45.txt"
+  },
+  {
+    "titre": "Art, billes, corps",
+    "page": 46,
+    "content_path": "public/texts/46.txt"
+  },
+  {
+    "titre": "Vantanoir",
+    "page": 47,
+    "content_path": "public/texts/47.txt"
+  },
+  {
+    "titre": "Les godasses du pharaon",
+    "page": 48,
+    "content_path": "public/texts/48.txt"
+  },
+  {
+    "titre": "Sur la route désaccordée d’un couack",
+    "page": 50,
+    "content_path": "public/texts/50.txt"
+  },
+  {
+    "titre": "La machette à couper les nombrils",
+    "page": 52,
+    "content_path": "public/texts/52.txt"
+  },
+  {
+    "titre": "La détresse du drone et de sa proie médicale",
+    "page": 54,
+    "content_path": "public/texts/54.txt"
+  },
+  {
+    "titre": "Citoyens, toutes nos épées sont pleines de sang.",
+    "page": 55,
+    "content_path": "public/texts/55.txt"
+  },
+  {
+    "titre": "L’Enigma impérial de Christopher",
+    "page": 56,
+    "content_path": "public/texts/56.txt"
+  },
+  {
+    "titre": "Le rien sous les coquillages",
+    "page": 58,
+    "content_path": "public/texts/58.txt"
+  },
+  {
+    "titre": "Olympie, à l’épreuve, déballe",
+    "page": 59,
+    "content_path": "public/texts/59.txt"
+  },
+  {
+    "titre": "Chrisme",
+    "page": 60,
+    "content_path": "public/texts/60.txt"
+  },
+  {
+    "titre": "Ba*(lzac == ch)",
+    "page": 61,
+    "content_path": "public/texts/61.txt"
+  },
+  {
+    "titre": "Les couleurs révisées de Stockholm",
+    "page": 62,
+    "content_path": "public/texts/62.txt"
+  },
+  {
+    "titre": "Franchir la grille du parc d’attraction au travail",
+    "page": 63,
+    "content_path": "public/texts/63.txt"
+  },
+  {
+    "titre": "Orgue bar pour sans paradis fixe",
+    "page": 64,
+    "content_path": "public/texts/64.txt"
+  },
+  {
+    "titre": "Suites et fins de l’accoutumance.",
+    "page": 65,
+    "content_path": "public/texts/65.txt"
+  },
+  {
+    "titre": "À l’article de la solitude",
+    "page": 66,
+    "content_path": "public/texts/66.txt"
+  },
+  {
+    "titre": "La boutanche du Prest agitateur",
+    "page": 68,
+    "content_path": "public/texts/68.txt"
+  },
+  {
+    "titre": "Fin de nuit, le bilan",
+    "page": 69,
+    "content_path": "public/texts/69.txt"
+  },
+  {
+    "titre": "Aucun partage n’est prévu",
+    "page": 70,
+    "content_path": "public/texts/70.txt"
+  },
+  {
+    "titre": "Le fâcheux de Pignerol",
+    "page": 71,
+    "content_path": "public/texts/71.txt"
+  },
+  {
+    "titre": "Prénommons-nous dans les bois",
+    "page": 72,
+    "content_path": "public/texts/72.txt"
+  },
+  {
+    "titre": "En cinq minutes, ouverts comme des livres.",
+    "page": 73,
+    "content_path": "public/texts/73.txt"
+  },
+  {
+    "titre": "Dieu dans les détails",
+    "page": 74,
+    "content_path": "public/texts/74.txt"
+  },
+  {
+    "titre": "Le picard et le baldaquin",
+    "page": 75,
+    "content_path": "public/texts/75.txt"
+  },
+  {
+    "titre": "L’ère qui mène aux tocs",
+    "page": 76,
+    "content_path": "public/texts/76.txt"
+  },
+  {
+    "titre": "Schwingung menthe",
+    "page": 77,
+    "content_path": "public/texts/77.txt"
+  },
+  {
+    "titre": "Au tableau, pour l’explosion",
+    "page": 78,
+    "content_path": "public/texts/78.txt"
+  },
+  {
+    "titre": "Sosie font, font, font",
+    "page": 79,
+    "content_path": "public/texts/79.txt"
+  },
+  {
+    "titre": "Numericain dans la descente aux loups",
+    "page": 80,
+    "content_path": "public/texts/80.txt"
+  },
+  {
+    "titre": "Définitoire si tôt",
+    "page": 82,
+    "content_path": "public/texts/82.txt"
+  },
+  {
+    "titre": "A.... S... P.. M. || p",
+    "page": 83,
+    "content_path": "public/texts/83.txt"
+  },
+  {
+    "titre": "Vraiment, dès Sisyphe",
+    "page": 84,
+    "content_path": "public/texts/84.txt"
+  },
+  {
+    "titre": "Musique des musiques",
+    "page": 85,
+    "content_path": "public/texts/85.txt"
+  },
+  {
+    "titre": "Le premier chien bien coiffé",
+    "page": 86,
+    "content_path": "public/texts/86.txt"
+  },
+  {
+    "titre": "Le voyage de la lettre ‘ n ’",
+    "page": 87,
+    "content_path": "public/texts/87.txt"
+  },
+  {
+    "titre": "La porte du procès confiée au Serrurier-des-Songes",
+    "page": 88,
+    "content_path": "public/texts/88.txt"
+  },
+  {
+    "titre": "Le guide des mots passants",
+    "page": 90,
+    "content_path": "public/texts/90.txt"
+  },
+  {
+    "titre": "Timber calculemus !!!",
+    "page": 91,
+    "content_path": "public/texts/91.txt"
+  },
+  {
+    "titre": "La cage ouverte",
+    "page": 93,
+    "content_path": "public/texts/93.txt"
+  }
+]

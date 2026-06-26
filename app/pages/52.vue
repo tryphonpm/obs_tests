@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import textContent from '../../public/texts/52.txt?raw'
+import textContentRaw from '../../public/texts/52.txt?raw'
 
 const pageLabel = '52'
-const pageTitle = "La machette à couper les nombrils."
+const pageTitle = "La machette à couper les nombrils"
+const textContent = textContentRaw.replace(/\r\n/g, '\n').replace(/\r/g, '\n').split('\n').slice(1).join('\n')
 </script>
 
 <template>
