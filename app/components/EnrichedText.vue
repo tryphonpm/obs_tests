@@ -61,6 +61,14 @@ function getIndentLevel(line: string) {
   return Math.min(tabCount + Math.floor(spaceCount / 2), 8)
 }
 
+function getExtraIndentLevel(rawLine: string, baseIndentLevel: number) {
+  return Math.max(0, getIndentLevel(rawLine) - baseIndentLevel)
+}
+
+function getLineDisplayText(rawLine: string) {
+  return rawLine.trimStart()
+}
+
 function preserveMultilineTaggedBlocks(text: string) {
   return text.replace(/<(i|m)>([\s\S]*?)<\/\1>/gi, (_, tagName: string, taggedText: string) => {
     return `<${tagName}>${taggedText.replace(/\n/g, inlineLineBreak)}</${tagName}>`
@@ -394,11 +402,37 @@ const columns = computed<EnrichedBlock[][]>(() => {
                   <em
                     v-else-if="segment.kind === 'italic'"
                     class="enriched-text__italic"
-                  >{{ segment.text }}</em>
+                  >
+                    <template
+                      v-for="(rawLine, lineIndex) in segment.text.split('\n')"
+                      :key="`${segment.id}-line-${lineIndex}`"
+                    >
+                      <br v-if="lineIndex > 0">
+                      <span
+                        v-if="lineIndex > 0 && getExtraIndentLevel(rawLine, line.indentLevel) > 0"
+                        class="enriched-text__inline-indent"
+                        :style="{ '--extra-indent-level': getExtraIndentLevel(rawLine, line.indentLevel) }"
+                      >{{ getLineDisplayText(rawLine) }}</span>
+                      <template v-else>{{ getLineDisplayText(rawLine) }}</template>
+                    </template>
+                  </em>
                   <span
                     v-else-if="segment.kind === 'marked'"
                     class="enriched-text__marked"
-                  >{{ segment.text }}</span>
+                  >
+                    <template
+                      v-for="(rawLine, lineIndex) in segment.text.split('\n')"
+                      :key="`${segment.id}-line-${lineIndex}`"
+                    >
+                      <br v-if="lineIndex > 0">
+                      <span
+                        v-if="lineIndex > 0 && getExtraIndentLevel(rawLine, line.indentLevel) > 0"
+                        class="enriched-text__inline-indent"
+                        :style="{ '--extra-indent-level': getExtraIndentLevel(rawLine, line.indentLevel) }"
+                      >{{ getLineDisplayText(rawLine) }}</span>
+                      <template v-else>{{ getLineDisplayText(rawLine) }}</template>
+                    </template>
+                  </span>
                   <template v-else>{{ segment.text }}</template>
                 </template>
               </span>
@@ -526,6 +560,11 @@ const columns = computed<EnrichedBlock[][]>(() => {
 .enriched-text__italic {
   font-style: italic;
   white-space: pre;
+}
+
+.enriched-text__inline-indent {
+  display: inline-block;
+  margin-left: calc(var(--extra-indent-level) * var(--spacing-enrichment-indent-step));
 }
 
 .enriched-text__marked {

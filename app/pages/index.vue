@@ -6,276 +6,283 @@ type PageLink = {
 
 const pageLinks: PageLink[] = [
   {
-    "to": "/9",
+    "to": "/volume_1/volume_1/9",
     "label": "p.9 - L’excuse de la girafe"
   },
   {
-    "to": "/10",
+    "to": "/volume_1/10",
     "label": "p.10 - Sept lieues"
   },
   {
-    "to": "/12",
+    "to": "/volume_1/12",
     "label": "p.12 - Monsieur Atroce et la main courante"
   },
   {
-    "to": "/14",
+    "to": "/volume_1/14",
     "label": "p.14 - Daimons de la rose"
   },
   {
-    "to": "/16",
+    "to": "/volume_1/16",
     "label": "p.16 - Le che rugit et se tait [sic]."
   },
   {
-    "to": "/17",
+    "to": "/volume_1/17",
     "label": "p.17 - Grossièrement contre le vrai"
   },
   {
-    "to": "/20",
+    "to": "/volume_1/20",
     "label": "p.20 - La forêt qui boite et l’arbre qui ne dit mot"
   },
   {
-    "to": "/22",
+    "to": "/volume_1/22",
     "label": "p.22 - L’imparfait, le don et son poison"
   },
   {
-    "to": "/24",
+    "to": "/volume_1/24",
     "label": "p.24 - De guerre lasse bien dégueulasse"
   },
   {
-    "to": "/25",
+    "to": "/volume_1/25",
     "label": "p.25 - Un matin anonyme face aux fidèles assoiffés"
   },
   {
-    "to": "/26",
+    "to": "/volume_1/26",
     "label": "p.26 - La justice comique des puits"
   },
   {
-    "to": "/28",
+    "to": "/volume_1/28",
     "label": "p.28 - Le piano à poings et la violence rémunérée"
   },
   {
-    "to": "/29",
+    "to": "/volume_1/29",
     "label": "p.29 - Comment va ton corps ?"
   },
   {
-    "to": "/30",
+    "to": "/volume_1/30",
     "label": "p.30 - L’apocalypse, mais de justesse"
   },
   {
-    "to": "/31",
+    "to": "/volume_1/31",
     "label": "p.31 - Round and round"
   },
   {
-    "to": "/33",
+    "to": "/volume_1/33",
     "label": "p.33 - Non, je suis ton père"
   },
   {
-    "to": "/34",
+    "to": "/volume_1/34",
     "label": "p.34 - Pont que tue le pas"
   },
   {
-    "to": "/35",
+    "to": "/volume_1/35",
     "label": "p.35 - Le rôdeur signe à l’hôtel de son contrat"
   },
   {
-    "to": "/36",
+    "to": "/volume_1/36",
     "label": "p.36 - La galaxie, le châtiment et le Kavalier"
   },
   {
-    "to": "/37",
+    "to": "/volume_1/37",
     "label": "p.37 - La variation du corps fêlé"
   },
   {
-    "to": "/38",
+    "to": "/volume_1/38",
     "label": "p.38 - Les deux chiens du cercle"
   },
   {
-    "to": "/39",
+    "to": "/volume_1/39",
     "label": "p.39 - Troyes à la suite, Champagne !"
   },
   {
-    "to": "/40",
+    "to": "/volume_1/40",
     "label": "p.40 - La tour à Boli"
   },
   {
-    "to": "/42",
+    "to": "/volume_1/42",
     "label": "p.42 - Un décroisé à l’asile"
   },
   {
-    "to": "/44",
+    "to": "/volume_1/44",
     "label": "p.44 - Le plateau bioluminescent des abysses"
   },
   {
-    "to": "/45",
+    "to": "/volume_1/45",
     "label": "p.45 - Le coq et la pendule, en triste"
   },
   {
-    "to": "/46",
+    "to": "/volume_1/46",
     "label": "p.46 - Art, billes, corps"
   },
   {
-    "to": "/47",
+    "to": "/volume_1/47",
     "label": "p.47 - Vantanoir"
   },
   {
-    "to": "/48",
+    "to": "/volume_1/48",
     "label": "p.48 - Les godasses du pharaon"
   },
   {
-    "to": "/50",
+    "to": "/volume_1/50",
     "label": "p.50 - Sur la route désaccordée d’un couack"
   },
   {
-    "to": "/52",
+    "to": "/volume_1/52",
     "label": "p.52 - La machette à couper les nombrils"
   },
   {
-    "to": "/54",
+    "to": "/volume_1/54",
     "label": "p.54 - La détresse du drone et de sa proie médicale"
   },
   {
-    "to": "/55",
+    "to": "/volume_1/55",
     "label": "p.55 - Citoyens, toutes nos épées sont pleines de sang."
   },
   {
-    "to": "/56",
+    "to": "/volume_1/56",
     "label": "p.56 - L’Enigma impérial de Christopher"
   },
   {
-    "to": "/58",
+    "to": "/volume_1/58",
     "label": "p.58 - Le rien sous les coquillages"
   },
   {
-    "to": "/59",
+    "to": "/volume_1/59",
     "label": "p.59 - Olympie, à l’épreuve, déballe"
   },
   {
-    "to": "/60",
+    "to": "/volume_1/60",
     "label": "p.60 - Chrisme"
   },
   {
-    "to": "/61",
+    "to": "/volume_1/61",
     "label": "p.61 - Ba*(lzac == ch)"
   },
   {
-    "to": "/62",
+    "to": "/volume_1/62",
     "label": "p.62 - Les couleurs révisées de Stockholm"
   },
   {
-    "to": "/63",
+    "to": "/volume_1/63",
     "label": "p.63 - Franchir la grille du parc d’attraction au travail"
   },
   {
-    "to": "/64",
+    "to": "/volume_1/64",
     "label": "p.64 - Orgue bar pour sans paradis fixe"
   },
   {
-    "to": "/65",
+    "to": "/volume_1/65",
     "label": "p.65 - Suites et fins de l’accoutumance."
   },
   {
-    "to": "/66",
+    "to": "/volume_1/66",
     "label": "p.66 - À l’article de la solitude"
   },
   {
-    "to": "/68",
+    "to": "/volume_1/68",
     "label": "p.68 - La boutanche du Prest agitateur"
   },
   {
-    "to": "/69",
+    "to": "/volume_1/69",
     "label": "p.69 - Fin de nuit, le bilan"
   },
   {
-    "to": "/70",
+    "to": "/volume_1/70",
     "label": "p.70 - Aucun partage n’est prévu"
   },
   {
-    "to": "/71",
+    "to": "/volume_1/71",
     "label": "p.71 - Le fâcheux de Pignerol"
   },
   {
-    "to": "/72",
+    "to": "/volume_1/72",
     "label": "p.72 - Prénommons-nous dans les bois"
   },
   {
-    "to": "/73",
+    "to": "/volume_1/73",
     "label": "p.73 - En cinq minutes, ouverts comme des livres."
   },
   {
-    "to": "/74",
+    "to": "/volume_1/74",
     "label": "p.74 - Dieu dans les détails"
   },
   {
-    "to": "/75",
+    "to": "/volume_1/75",
     "label": "p.75 - Le picard et le baldaquin"
   },
   {
-    "to": "/76",
+    "to": "/volume_1/76",
     "label": "p.76 - L’ère qui mène aux tocs"
   },
   {
-    "to": "/77",
+    "to": "/volume_1/77",
     "label": "p.77 - Schwingung menthe"
   },
   {
-    "to": "/78",
+    "to": "/volume_1/78",
     "label": "p.78 - Au tableau, pour l’explosion"
   },
   {
-    "to": "/79",
+    "to": "/volume_1/79",
     "label": "p.79 - Sosie font, font, font"
   },
   {
-    "to": "/80",
+    "to": "/volume_1/80",
     "label": "p.80 - Numericain dans la descente aux loups"
   },
   {
-    "to": "/82",
+    "to": "/volume_1/82",
     "label": "p.82 - Définitoire si tôt"
   },
   {
-    "to": "/83",
+    "to": "/volume_1/83",
     "label": "p.83 - A.... S... P.. M. || p"
   },
   {
-    "to": "/84",
+    "to": "/volume_1/84",
     "label": "p.84 - Vraiment, dès Sisyphe"
   },
   {
-    "to": "/85",
+    "to": "/volume_1/85",
     "label": "p.85 - Musique des musiques"
   },
   {
-    "to": "/86",
+    "to": "/volume_1/86",
     "label": "p.86 - Le premier chien bien coiffé"
   },
   {
-    "to": "/87",
+    "to": "/volume_1/87",
     "label": "p.87 - Le voyage de la lettre ‘ n ’"
   },
   {
-    "to": "/88",
+    "to": "/volume_1/88",
     "label": "p.88 - La porte du procès confiée au Serrurier-des-Songes"
   },
   {
-    "to": "/90",
+    "to": "/volume_1/90",
     "label": "p.90 - Le guide des mots passants"
   },
   {
-    "to": "/91",
+    "to": "/volume_1/91",
     "label": "p.91 - Timber calculemus !!!"
   },
   {
-    "to": "/93",
+    "to": "/volume_1/93",
     "label": "p.93 - La cage ouverte"
   }
 ]
 </script>
 
 <template>
-  <div>
-    <div class="mt-100">
-      <p v-for="page in pageLinks" :key="page.to">
+  <div class="mt-20">
+    <h2 class="title-blockquote text-xl">
+      Bac à Fables
+    </h2>
+    <div class="index-page__links mt-20">
+      <p
+        v-for="page in pageLinks"
+        :key="page.to"
+        class="index-page__link-item"
+      >
         <NuxtLink :to="page.to">
           {{ page.label }}
         </NuxtLink>
@@ -283,3 +290,18 @@ const pageLinks: PageLink[] = [
     </div>
   </div>
 </template>
+
+<style scoped>
+
+.index-page__links {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.5rem 1.5rem;
+  font-family: "Aquiline Two", serif;
+  font-size: 150%;
+}
+
+.index-page__link-item {
+  margin: 0;
+}
+</style>
