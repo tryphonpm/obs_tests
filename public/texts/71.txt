@@ -32,20 +32,7 @@ et l’immense salle ovale vidée de ses gardes
   autour d’un pourrissement d’empire éteint.
   On comptera douze salopards véritables.
   <col>
-  R       <vin>Q</vin>       Q 
-<orn>M</orn>  <rom>Dioclétien</rom> <orn>M</orn>
-<orn>M</orn> <rom>Pompée</rom> <orn>M</orn>
-<orn>M</orn> <rom>César</rom> <orn>M</orn>
-<orn>M</orn> <rom>Auguste</rom> <orn>M</orn>
-<orn>M</orn> <rom>Claude</rom> <orn>M</orn>
-<orn>M</orn> <rom>tibère</rom> <orn>M</orn>
-<orn>M</orn> <rom>Néron</rom> <orn>M</orn>
-<orn>M</orn> <rom>Cicéron</rom> <orn>M</orn>
-<orn>M</orn> <rom>Marc-Antoine</rom> <orn>M</orn>
-<orn>M</orn> <rom>Trajan</rom> <orn>M</orn>
-<orn>M</orn> <rom>espasien</rom> <orn>M</orn>
-<orn>M</orn> <rom>Vitellius</rom> <orn>M</orn>
-
+<img>71_empereurs.png</img>
 Tous coincés en piloris,
 sous la coupole
 d’un Palais de Soleil

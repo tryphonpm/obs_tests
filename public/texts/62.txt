@@ -42,9 +42,9 @@ Des farfadets numériques ont ajouté après coup
   mais les lunettes et la peau du boss restent noires,
   et toutes les autres peaux avec.
 A l’exception, bien sûr,  de celles de Dannie,
-  battues, tendues à l’horizontal sous l’ombre 
-  et l’agitation d’oranges en cuivre,
-  autant de flying saucers à étoiles non-identifiés.
+  battues, tendues à l’horizontal
+    sous l’ombre et l’agitation d’oranges en cuivre,
+    autant de flying saucers à étoiles non-identifiés.
 
 Tout proche, caressé hors de sa lampe,
   l’architecte Eric repositionne un pilier
@@ -104,12 +104,8 @@ remontent en acrobates
 l’escalier des jours heureux.</m>
 
 <espace>
-<espace>
+
 <espace>
 
-      B  Charles Jaki Johnny Dannie Eric Clifford B 
-      T  Johnny Charles Mingus Jaki Clifford Dannie T 
-      D  Dannie Richmond Jaki Byard Charles Eric D 
-      F  Eric Dolphy Dannie Johnny Jaki Charles F 
-      P  Jaki Eric Charles Clifford Jordan Johnny P 
-      S  Clifford Dannie Charles Eric Johnny Coles S
+<espace>
+<img>62_jazzmen.png</img>

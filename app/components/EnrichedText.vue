@@ -38,7 +38,13 @@ type EnrichedEspaceBlock = {
   kind: 'espace'
 }
 
-type EnrichedBlock = EnrichedParagraphBlock | EnrichedRuleBlock | EnrichedColBreakBlock | EnrichedEspaceBlock
+type EnrichedImageBlock = {
+  id: string
+  kind: 'image'
+  src: string
+}
+
+type EnrichedBlock = EnrichedParagraphBlock | EnrichedRuleBlock | EnrichedColBreakBlock | EnrichedEspaceBlock | EnrichedImageBlock
 
 const props = withDefaults(defineProps<{
   content: string
@@ -63,6 +69,26 @@ function preserveMultilineTaggedBlocks(text: string) {
 
 function restoreInlineLineBreaks(text: string) {
   return text.replaceAll(inlineLineBreak, '\n')
+}
+
+function normalizeImageSrc(filename: string) {
+  const trimmed = filename.trim()
+
+  if (!/^[A-Za-z0-9._-]+$/.test(trimmed)) {
+    return null
+  }
+
+  return trimmed
+}
+
+function resolveImageUrl(filename: string) {
+  const src = normalizeImageSrc(filename)
+
+  if (!src) {
+    return null
+  }
+
+  return `/images/${encodeURIComponent(src)}`
 }
 
 function parseTextSegments(text: string, lineId: string) {
@@ -145,6 +171,7 @@ function parseBlocks(content: string): EnrichedBlock[] {
   let ruleCount = 0
   let colBreakCount = 0
   let espaceCount = 0
+  let imageCount = 0
 
   function closeParagraph() {
     if (currentLines.length === 0) {
@@ -197,6 +224,20 @@ function parseBlocks(content: string): EnrichedBlock[] {
         kind: 'espace',
       })
       espaceCount += 1
+      return
+    }
+
+    const imageMatch = trimmedLine.match(/^<img>([\s\S]*?)<\/img>$/i)
+    const imageSrc = imageMatch?.[1] ? normalizeImageSrc(imageMatch[1]) : null
+
+    if (imageMatch && imageSrc) {
+      closeParagraph()
+      parsedBlocks.push({
+        id: `image-${imageCount}`,
+        kind: 'image',
+        src: imageSrc,
+      })
+      imageCount += 1
       return
     }
 
@@ -370,6 +411,17 @@ const columns = computed<EnrichedBlock[][]>(() => {
             aria-hidden="true"
           />
 
+          <figure
+            v-else-if="block.kind === 'image'"
+            class="enriched-text__image"
+          >
+            <img
+              :src="resolveImageUrl(block.src) ?? undefined"
+              :alt="block.src"
+              class="enriched-text__image-el"
+            >
+          </figure>
+
           <span
             v-else-if="block.kind === 'rule'"
             class="enriched-text__block-rule"
@@ -520,6 +572,19 @@ const columns = computed<EnrichedBlock[][]>(() => {
   flex-shrink: 0;
   height: 0;
   margin: 0;
+}
+
+.enriched-text__image {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: calc(var(--spacing-enrichment-paragraph-gap) * 0.01) 0;
+}
+
+.enriched-text__image-el {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .enriched-text__footer {
